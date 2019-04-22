@@ -24,10 +24,11 @@ public class Task1 implements Task {
      */
     @Override
     public void run() {
-        int[] array = arrayFactory.getInstance(20);
-        int min = Numbers.min(array);
-        int max = Numbers.max(array);
-        double avg = Numbers.avg(array);
+        Integer[] array = arrayFactory.getInstance(20);
+        Integer min = Numbers.min(array);
+        Integer max = Numbers.max(array);
+        Double avg = Numbers.avg(array);
+        
         /*
          * TODO(Студент): Выполните задание №1
          *
