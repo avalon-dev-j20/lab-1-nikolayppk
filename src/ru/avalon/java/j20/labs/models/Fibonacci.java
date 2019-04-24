@@ -35,6 +35,7 @@ public class Fibonacci implements Iterable<Integer> {
          */
         @Override
         public boolean hasNext() {
+            
             return true;
         }
 

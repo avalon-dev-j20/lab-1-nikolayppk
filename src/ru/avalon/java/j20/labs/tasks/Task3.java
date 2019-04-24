@@ -15,6 +15,7 @@ public class Task3 implements Task {
     @Override
     public void run() {
         Fibonacci fib = new Fibonacci();
+        
         for (float i : fib) {
             System.out.println(i);
         } /*
