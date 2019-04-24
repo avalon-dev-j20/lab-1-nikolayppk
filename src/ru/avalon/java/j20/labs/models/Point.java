@@ -2,6 +2,7 @@ package ru.avalon.java.j20.labs.models;
 
 /**
  * Модель представления о точке.
+ * @param <T>Обобщенный тип
  */
 public class Point<T extends Number> {
     /**

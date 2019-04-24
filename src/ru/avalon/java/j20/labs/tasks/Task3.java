@@ -3,6 +3,7 @@ package ru.avalon.java.j20.labs.tasks;
 import ru.avalon.java.j20.labs.Task;
 
 import java.util.Iterator;
+import ru.avalon.java.j20.labs.models.Fibonacci;
 
 /**
  * Задание №3
@@ -13,7 +14,10 @@ public class Task3 implements Task {
 
     @Override
     public void run() {
-        /*
+        Fibonacci fib = new Fibonacci();
+        for (float i : fib) {
+            System.out.println(i);
+        } /*
          * TODO(Студент): Выполнить задание №3
          *
          * 1. Завершить описание класса Fibonacci так, чтобы класс
