@@ -1,7 +1,6 @@
 package ru.avalon.java.j20.labs.models;
 
 import java.util.Iterator;
-import java.util.*;
 /**
  * Модель получения последовательности чисел Фибоначчи.
  *
@@ -17,13 +16,26 @@ import java.util.*;
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%B0_%D0%A4%D0%B8%D0%B1%D0%BE%D0%BD%D0%B0%D1%87%D1%87%D0%B8">Числа Фибоначчи</a>
  */
 public class Fibonacci implements Iterable<Integer> {
+    
+    /**
+     * Определяет количество чисел в методе Фибоначи
+     */
+    static int count;
+    public static void setCount(int kol)
+    {
+     count = kol;
+    }
+    static public int getCount()
+    {
+        return count;
+    }
   
     /**
      * Итератор, выполняющий обход последовательности
      * чисел Фибоначчи.
      */
     private static class FibonacciIterator implements Iterator<Integer> {
-        private int b0 = 0, b1 = 1; 
+        private int b0 = 0, b1 = 1, i = 0; 
        
         /**
          * Определяет, есть ли следующее значение
@@ -34,9 +46,9 @@ public class Fibonacci implements Iterable<Integer> {
          * {@code false}.
          */
         @Override
-        public boolean hasNext() {
-            
-            return true;
+        public boolean hasNext()
+        { 
+          return i < count;
         }
 
         /**
@@ -46,11 +58,12 @@ public class Fibonacci implements Iterable<Integer> {
          * @return следующее число последовательности.
          */
         @Override
-        public Integer next() {
+        public Integer next() 
+        {
            int value = b0 + b1;
            b0 = b1;
            b1 = value;
-           
+           i++;
            return value;
         }
         

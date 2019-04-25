@@ -15,10 +15,16 @@ public class Task3 implements Task {
     @Override
     public void run() {
         Fibonacci fib = new Fibonacci();
-        
-        for (float i : fib) {
-            System.out.println(i);
-        } /*
+        Fibonacci.setCount(20);
+        int Kol = Fibonacci.getCount();
+        int sum = 0;
+        for (int i : fib) 
+        {
+            sum = sum + i;
+            System.out.println(i);    
+        }
+        System.out.println("Сумма " + Kol + " первых чисел = " + sum);
+        /*
          * TODO(Студент): Выполнить задание №3
          *
          * 1. Завершить описание класса Fibonacci так, чтобы класс
