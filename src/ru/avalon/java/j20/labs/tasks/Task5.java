@@ -1,5 +1,8 @@
 package ru.avalon.java.j20.labs.tasks;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import ru.avalon.java.j20.labs.Task;
 import ru.avalon.java.j20.labs.core.RandomArrayFactory;
 
@@ -25,9 +28,11 @@ public class Task5 implements Task {
     public void run() {
         final Integer[] array = arrayFactory.getInstance(20);
 
-        List<Integer> list = null;
+        List<Integer> list = new ArrayList<>();
+        list.addAll(Arrays.asList(array));
 
-        Set<Integer> set = null;
+        Set<Integer> set = new HashSet<>();
+        set.addAll(Arrays.asList(array));
 
         /**
          * TODO(Студент): Выполните задание №5

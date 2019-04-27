@@ -20,8 +20,7 @@ public class Task3 implements Task {
         int sum = 0;
         for (int i : fib) 
         {
-            sum = sum + i;
-            System.out.println(i);    
+            sum = sum + i;    
         }
         System.out.println("Сумма " + Kol + " первых чисел = " + sum);
         /*
